@@ -4,24 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noai, noimageai, noindex">
-    <title>osahunekairi</title>
+    <title>あかねのギャラリー</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        img { max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 8px; }
-        .caution { color: red; font-size: 0.8em; margin-top: 20px; }
+        body { font-family: sans-serif; text-align: center; background-color: #f9f9f9; color: #333; padding: 40px 20px; }
+        h1 { margin-bottom: 10px; }
+        .intro { margin-bottom: 30px; color: #666; }
+        
+        /* ギャラリーの枠組み */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 画面幅に合わせて自動で並べる */
+            gap: 15px; /* 画像同士の隙間 */
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 画像の設定 */
+        .gallery img {
+            width: 100%;
+            height: 200px; /* 高さを揃える */
+            object-fit: cover; /* 縦横比を維持しつつ枠いっぱいに表示 */
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* マウスを乗せたときに少し大きくする */
+        }
+
+        .links { margin-top: 40px; border-top: 1px solid #ddd; padding-top: 20px; }
+        .caution { color: #d9534f; font-size: 0.85em; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
-    <h1>Gallery</h1>
-    <p>オリジナルキャラクターのイラストを公開しています。</p>
-    
-    <img src="イラスト6.png" alt="Original Character">
 
-    <hr>
-    <p><a href="https://x.com/h_b1221a?s=21">X (Twitter) はこちら</a></p>
-    
-    <div class="caution">
-        <p>※当サイト内の全ての画像・文章の無断転載、およびAI学習への利用を固く禁じます。</p>
+    <h1>Character Gallery</h1>
+    <p class="intro">オリジナルキャラクターの表情集や設定画を公開しています。</p>
+
+    <div class="gallery">
+        <img src="イラスト6.png" alt="Character Face 1">
+        <img src="画像名2.png" alt="Character Face 2">
+        <img src="画像名3.png" alt="Character Face 3">
+        </div>
+
+    <div class="links">
+        <p><a href="XのプロフィールURL">X (Twitter) はこちら</a></p>
+        <p><a href="ポイピクのURL">過去の作品アーカイブ (ポイピク)</a></p>
     </div>
+
+    <p class="caution">※当サイト内の全ての画像・文章の無断転載、およびAI学習への利用を固く禁じます。</p>
+
 </body>
 </html>
